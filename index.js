@@ -24,6 +24,7 @@ require('./config/datasource');
  * Call route
  */
 require('./route/User.route')(server);
+require('./route/route')(server);
 
 /**
  * Starting server

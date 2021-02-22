@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "077ad291-7d17-4e07-91ff-4d54c2bb6ebb",
+		"name": "_aNodeJS Simple Nosql API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Create New User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"User ax\",\n\t\"email\": \"b@a.com\",\n\t\"phone\": \"zzzz\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}user/create",
+							"host": [
+								"{{base_url}}user"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}user/all",
+							"host": [
+								"{{base_url}}user"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Detail User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}user/detail/59e325543b2a0e12d237804b",
+							"host": [
+								"{{base_url}}user"
+							],
+							"path": [
+								"detail",
+								"59e325543b2a0e12d237804b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"phone\": \"0987654321\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}user/update/59e325543b2a0e12d237804b",
+							"host": [
+								"{{base_url}}user"
+							],
+							"path": [
+								"update",
+								"59e325543b2a0e12d237804b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "data",
+			"item": [
+				{
+					"name": "Create New data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"uwu\",\n    \"d1\":\"d1 data\",\n    \"d2\":\"d2 data\",\n    \"d3\":\"d3 data\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}data/create",
+							"host": [
+								"{{base_url}}data"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}data/all",
+							"host": [
+								"{{base_url}}data"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Detail data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}data/detail/60337ccd6d18010f1461c21e",
+							"host": [
+								"{{base_url}}data"
+							],
+							"path": [
+								"detail",
+								"60337ccd6d18010f1461c21e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update data",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"aa\",\n    \"d1\":\"new dataa\",\n    \"d2\":\"new dataa\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}data/update/60337ccd6d18010f1461c21e",
+							"host": [
+								"{{base_url}}data"
+							],
+							"path": [
+								"update",
+								"60337ccd6d18010f1461c21e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"aa\",\n    \"d1\":\"new dataa\",\n    \"d2\":\"new dataa\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}data/delete/60337ccd6d18010f1461c21e",
+							"host": [
+								"{{base_url}}data"
+							],
+							"path": [
+								"delete",
+								"60337ccd6d18010f1461c21e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "Create New data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"registrationCode\":\"123123123\",\n    \"name\":\"Igor\",\n    \"address\":\"road rd.\",\n    \"occupation\":\"new member\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}employee/create",
+							"host": [
+								"{{base_url}}employee"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}employee/all",
+							"host": [
+								"{{base_url}}employee"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Detail data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}employee/detail/6033852a241a6d1bddaa5ad3",
+							"host": [
+								"{{base_url}}employee"
+							],
+							"path": [
+								"detail",
+								"6033852a241a6d1bddaa5ad3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update data",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"registrationCode\":\"internal/modules/cjs/loader.js\",\n    \"name\":\"Igor Rogi\",\n    \"address\":\"Road Street rd.\",\n    \"occupation\":\"new member x\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}employee/update/6033852a241a6d1bddaa5ad3",
+							"host": [
+								"{{base_url}}employee"
+							],
+							"path": [
+								"update",
+								"6033852a241a6d1bddaa5ad3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"aa\",\n    \"d1\":\"new dataa\",\n    \"d2\":\"new dataa\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}employee/delete/60338567241a6d1bddaa5ad5",
+							"host": [
+								"{{base_url}}employee"
+							],
+							"path": [
+								"delete",
+								"60338567241a6d1bddaa5ad5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

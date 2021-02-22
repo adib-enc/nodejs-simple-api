@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "author": "Muhammad Harits Syaifulloh",
+  "author": "adib-enc",
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.5.1",

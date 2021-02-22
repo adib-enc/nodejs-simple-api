@@ -1,6 +1,8 @@
 const BaseDataController = require('../controllers/BaseDataController');
+const EmployeeController = require('../controllers/EmployeeController');
 
 let baseController = new BaseDataController();
+let employeeController = new EmployeeController();
 
 // request handler injector
 function handler(_object, subhandler){
@@ -10,10 +12,15 @@ function handler(_object, subhandler){
     }
 }
 
+function baseResource(server, name, controller){
+    server.post('/'+name+'/create', handler(controller, controller.create));
+    server.get('/'+name+'/all', handler(controller, controller.all));
+    server.get('/'+name+'/detail/:id', handler(controller, controller.detail));
+    server.put('/'+name+'/update/:id', handler(controller, controller.update));
+    server.post('/'+name+'/delete/:id', handler(controller, controller.delete));
+}
+
 module.exports = function (server) {
-    server.post('/data/create', handler(baseController, baseController.create));
-    server.get('/data/all', handler(baseController, baseController.all));
-    server.get('/data/detail/:id', handler(baseController, baseController.detail));
-    server.put('/data/update/:id', handler(baseController, baseController.update));
-    server.post('/data/delete/:id', handler(baseController, baseController.delete));
+    baseResource(server, "data", baseController)
+    baseResource(server, "employee", employeeController)
 }

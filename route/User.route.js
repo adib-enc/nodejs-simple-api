@@ -1,8 +1,8 @@
-const createUserController = require('./../controller/CreateNewUserController');
-const detailUserController = require('./../controller/DetailUserController');
-const getAllUserController = require('./../controller/GetAllUserController');
-const deleteUserController = require('./../controller/DeleteUserController');
-const updateUserController = require('./../controller/UpdateUserController');
+const createUserController = require('../controllers/CreateNewUserController');
+const detailUserController = require('../controllers/DetailUserController');
+const getAllUserController = require('../controllers/GetAllUserController');
+const deleteUserController = require('../controllers/DeleteUserController');
+const updateUserController = require('../controllers/UpdateUserController');
 
 /**
  * User route

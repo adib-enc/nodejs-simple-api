@@ -1,4 +1,4 @@
-const BaseDataController = require('./../controller/BaseDataController');
+const BaseDataController = require('../controllers/BaseDataController');
 
 let baseController = new BaseDataController();
 
@@ -15,5 +15,5 @@ module.exports = function (server) {
     server.get('/data/all', handler(baseController, baseController.all));
     server.get('/data/detail/:id', handler(baseController, baseController.detail));
     server.put('/data/update/:id', handler(baseController, baseController.update));
-    server.post('/data/delete', handler(baseController, baseController.delete));
+    server.post('/data/delete/:id', handler(baseController, baseController.delete));
 }

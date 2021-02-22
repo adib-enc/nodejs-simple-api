@@ -1,4 +1,4 @@
-var schemer = require('@/model/schemer');
+var schemer = require('./schemer');
 
 /**
  * Defining user schema
@@ -30,10 +30,6 @@ const dataScheme = {
         default: Date.now()
     }
 };
-
-/**
- * Creating user collection
- */
 
 /**
  * Exporting module
